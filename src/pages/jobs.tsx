@@ -13,8 +13,6 @@ export default function Jobs() {
     useEffect(() => setMounted(true), [])
     return (
         <main>
-            test dasas 
-            dsklsdkl dsojdoakossacsac
             <Layout className={styles.layout}>
                 <div style={{ visibility: !mounted ? 'hidden' : 'visible' }}>
                     <Headers />
