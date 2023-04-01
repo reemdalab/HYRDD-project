@@ -27,6 +27,7 @@ export default function Jobs() {
                                 />
                             </Sider>
 
+
                             <Content style={{ padding: '0 24px', minHeight: 280 }}>Content</Content>
                         </Layout>
                     </Content>
