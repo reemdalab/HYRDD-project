@@ -1,0 +1,472 @@
+@import 'helpers.scss';
+@import 'breakpoints.scss';
+
+.header {
+    background-color: $primary;
+    padding: 0;
+    height: $height;
+}
+
+.col {
+    display: flex;
+    justify-content: center;
+
+}
+
+.row {
+    align-items: $align-center;
+    height: $height;
+}
+
+.logo {
+    display: $display-flex;
+    align-content: $align-center;
+    margin-left: 40px;
+}
+
+.lang {
+    width: 50px;
+    height: 25px;
+    display: $display-flex;
+    align-items: $align-center;
+    justify-content: center;
+    font-weight: 500;
+    font-size: 12px;
+    margin-left: 60px;
+}
+
+.content {
+    align-items: $align-center;
+    justify-content: center;
+    background-color: $primary;
+    height: 100%;
+}
+
+.colContent {
+    display: $display-flex;
+    justify-content: center;
+}
+
+.grid {
+    display: grid;
+    position: relative;
+    display: $display-flex;
+    align-items: $align-center;
+    // gap: 20%;
+    width: $width;
+    top: 110px;
+    left: 90px;
+}
+
+.welcomeDiv {
+    position: absolute;
+    top: 127px;
+    left: 226px;
+
+    .register {
+        margin-left: 2px;
+        padding: 0;
+        color: $textColor;
+        font-weight: 400;
+        font-size: 13px;
+    }
+
+}
+
+.hyrdd {
+    color: $purble;
+}
+
+.text {
+    font-size: 32px;
+    margin-bottom: 0;
+    // margin-top: 27px;
+}
+
+.icons {
+    $size: 75px;
+    height: $size;
+    width: $size;
+    font-weight: 300;
+    color: $gray;
+}
+
+.login {
+    position: relative;
+    left: 110px;
+    top: 120px;
+    width: 280px;
+    // display: flex;
+    // flex-direction: row;
+}
+
+.login {
+    .input {
+        width: 100%;
+        height: 30px;
+        border-radius: 5px;
+    }
+
+    p {
+        margin-bottom: 5px;
+    }
+
+    .checkBox {
+        font-size: 12px;
+        font-weight: 500;
+    }
+
+}
+
+.sign {
+    width: 100%;
+    height: 31px;
+    color: $button-txt-color;
+    border-color: $button-border-color;
+    background-color: $button-bg-color;
+}
+
+.passDiv {
+    display: flex;
+    justify-content: $space-between;
+    position: absolute;
+    bottom: 145px;
+    left: 177px;
+}
+
+.sign:hover {
+    background-color: $purble;
+    color: $button-txt-color;
+}
+
+.resetDiv {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 14px;
+}
+
+.forgetPass {
+    float: right;
+    color: $textColor;
+    padding: 0;
+    font-size: 12px;
+}
+
+.forgetPass:hover {
+    color: $textColor !important;
+}
+
+.resetPass {
+    float: right;
+    color: $textColor;
+    padding: 0;
+    font-size: 13px;
+    bottom: 2px;
+}
+.wrapedDiv {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: $space-between;
+}
+.resetPass:hover {
+    color: $textColor !important;
+}
+
+.email {
+    display: $display-flex;
+    flex-direction: $row-direction;
+}
+
+.displayRow {
+    display: flex;
+    flex-direction: row !important;
+}
+
+.lang {
+    @include xs {
+        align-items: $align-center;
+    }
+
+    @include sm {
+        align-items: $align-center;
+    }
+
+    @include md() {
+        align-items: $align-center;
+    }
+
+    @include lg {
+        align-items: $align-center;
+    }
+
+    @include xl {
+        align-items: $align-center;
+    }
+}
+
+.grid {
+    @include xs {
+        display: none;
+    }
+
+    @include sm {
+        display: none;
+    }
+
+    @include md {
+        display: none;
+    }
+
+    @include lg {
+        display: flex;
+    }
+
+    @include xl {
+        display: flex;
+    }
+}
+
+.displayRow {
+    @include xs {
+        display: flex;
+        flex-direction: row !important;
+    }
+
+    @include sm {
+        display: flex;
+        flex-direction: row !important;
+    }
+
+    @include md {
+        position: static;
+    }
+
+    @include lg {
+        position: static;
+
+    }
+
+    @include xl {
+        position: static;
+
+    }
+}
+
+// .content{
+//     @include xs {
+//         width: 100%;
+//         align-items: $align-center;
+//         justify-content: center;
+//         }
+
+//         @include sm {
+//         display: flex;
+//         width: 100%;
+//         align-items: $align-center;
+//         justify-content: center;        
+//         }
+
+//         @include md {
+//         display: flex;
+//         width: 100%;
+//         align-items: $align-center;
+//         justify-content: center;
+//         }
+
+//         @include lg {
+//         width: 100%;
+//         }
+
+//         @include xl {
+//         width: 100%;
+//         }
+// }
+.colContent1 {
+    @include xs {
+        width: 100%;
+        top: 30px;
+        left: 0;
+        display: flex;
+        justify-content: center;
+    }
+
+    @include sm {
+
+        display: flex;
+        justify-content: center;
+    }
+
+    @include md {
+        top: 0px
+    }
+
+    @include lg {
+        width: 100%;
+
+    }
+
+    @include xl {
+        width: 100%;
+    }
+}
+
+.welcomeDiv {
+    @include xs {
+        position: static;
+    }
+
+    @include sm {
+        position: static;
+        left: 35%;
+        top: 69px
+    }
+
+    @include md {
+        position: absolute;
+        width: 100%;
+        left: 35%;
+        top: 69px
+    }
+
+    @include lg {
+        position: absolute;
+        width: 100%;
+        left: 215px;
+        top: 90px;
+    }
+
+    @include xl {
+        position: absolute;
+        position: absolute;
+        width: 100%;
+        left: 225px;
+        top: 90px;
+    }
+}
+
+.login {
+    @include xs {
+        position: relative;
+        top: 40px;
+        left: 0;
+    }
+
+    @include sm {
+        display: flex;
+        justify-content: center;
+        top: 30px;
+        left: 0;
+    }
+
+    @include md {
+        position: absolute;
+        width: initial;
+        left: 100px;
+        top: 80px;
+    }
+
+    @include lg {
+        width: initial;
+    }
+
+    @include xl {}
+}
+
+.colContent {
+    @include xs {
+        display: flex;
+        justify-content: center;
+    }
+
+    @include sm {
+        display: flex;
+        justify-content: center;
+    }
+
+    @include md {
+        display: flex;
+        justify-content: center;
+    }
+
+    @include lg {}
+
+    @include xl {}
+}
+
+// .text
+// {
+//     @include xs {
+//     font-size: 22;
+//     display: grid;
+//     justify-content: center;
+//     }
+
+//     @include sm {
+//     font-size: 22;
+//     }
+
+//     @include md {
+//         position: static;
+//     }
+
+//     @include lg {
+//         position: static;
+//     }
+
+//     @include xl {
+//         position: static;
+//     }
+// }
+
+.passDiv {
+    @include xs {
+        bottom: 170px;
+        
+    }
+
+    @include sm {
+        position: absolute;
+        bottom: 170px;
+        left: 163px;
+    }
+
+    @include md {
+        position: relative;
+        left: -100px;
+        top: 82px;
+    }
+
+    @include lg {
+       
+    }
+
+    @include xl {
+        position: absolute;
+        top: 85px;
+        left: 155px;
+    }
+}
+.resetPass
+{
+        @include xs
+        {
+            // left:23px;
+            bottom:3px
+        }
+        @include xs {
+            // left:23px;
+            bottom: 5px
+        }
+        @include md {
+            bottom: 5px;
+            left: 0;
+            }
+        @include lg {
+            bottom: 4px;
+        }
+        @include xl {
+            bottom: 4px;
+        }
+    
+}
+

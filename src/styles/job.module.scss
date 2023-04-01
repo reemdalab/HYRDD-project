@@ -1,0 +1,69 @@
+@import 'helpers.scss';
+.layout {
+    background-color: $job-bg-color;
+}
+.content
+{
+    background-color: #f2f3f8;
+    padding: 0;
+    
+}
+.header {
+    background-color: $primary;
+    padding: 0;
+    height: $height;
+    display: flex;
+    align-items: $align-center;
+    justify-content: $space-between;
+}
+.logo {
+    display: $display-flex;
+    align-content: $align-center;
+}
+.sider
+{
+    margin-top: $margin-1px;
+}
+.lang {
+    width: 48px;
+    height: 25px;
+    display: $display-flex;
+    align-items: $align-center;
+    justify-content: $justify-center;
+    font-weight: 500;
+    font-size: 12px;
+    margin-right: 10px;
+}
+.details
+{
+    display: $display-flex;
+    align-items: $align-center;
+    p{
+        margin-right: 10px;
+        font-size: 9px;
+        font-weight: 600;
+        margin-left: 10px;
+    }
+}
+.DropdownIcon
+{
+    font-size: 8px;
+    margin-right: 7px;
+}
+.margin
+{
+    margin-right: $margin-10px;
+    margin-left: 5px;
+}
+.infoIcon
+{
+    color: #4f5158;
+    font-size: 11px;
+    margin-right: 15px;
+    font-weight: 600;
+    margin-left: 8px;
+}
+.user
+{
+    margin-right: 5px;
+}
