@@ -14,7 +14,7 @@ export default function Jobs()
     useEffect(() => setMounted(true), [])
     return(
      <main>
-        hhhhhhhhhh
+        tesst
         <Layout className={styles.layout}>
             <div style={{ visibility: !mounted ? 'hidden' : 'visible' }}>
                <Headers/>
