@@ -13,7 +13,6 @@ export default function Jobs() {
     useEffect(() => setMounted(true), [])
     return (
         <main>
-            this is a new test jfduifjskl kll
             <Layout className={styles.layout}>
                 <div style={{ visibility: !mounted ? 'hidden' : 'visible' }}>
                     <Headers />

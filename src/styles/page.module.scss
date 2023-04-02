@@ -251,36 +251,6 @@
 
     }
 }
-
-// .content{
-//     @include xs {
-//         width: 100%;
-//         align-items: $align-center;
-//         justify-content: center;
-//         }
-
-//         @include sm {
-//         display: flex;
-//         width: 100%;
-//         align-items: $align-center;
-//         justify-content: center;        
-//         }
-
-//         @include md {
-//         display: flex;
-//         width: 100%;
-//         align-items: $align-center;
-//         justify-content: center;
-//         }
-
-//         @include lg {
-//         width: 100%;
-//         }
-
-//         @include xl {
-//         width: 100%;
-//         }
-// }
 .colContent1 {
     @include xs {
         width: 100%;
@@ -392,32 +362,6 @@
 
     @include xl {}
 }
-
-// .text
-// {
-//     @include xs {
-//     font-size: 22;
-//     display: grid;
-//     justify-content: center;
-//     }
-
-//     @include sm {
-//     font-size: 22;
-//     }
-
-//     @include md {
-//         position: static;
-//     }
-
-//     @include lg {
-//         position: static;
-//     }
-
-//     @include xl {
-//         position: static;
-//     }
-// }
-
 .passDiv {
     @include xs {
         bottom: 170px;
@@ -450,11 +394,9 @@
 {
         @include xs
         {
-            // left:23px;
             bottom:3px
         }
         @include xs {
-            // left:23px;
             bottom: 5px
         }
         @include md {
