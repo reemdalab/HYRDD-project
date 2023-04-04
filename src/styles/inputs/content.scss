@@ -1,0 +1,123 @@
+$primary: #fff;
+$purple: #7b67fe;
+$hoverColor: #e6e5f5;
+$center: center;
+
+.list {
+    width: 220px;
+    background-color: $primary;
+    margin-left: -12px;
+    height: 100%;
+    border-radius: 5px;
+
+    ul {
+        list-style-type: none;
+        padding-top: 5px;
+        margin-top: 0;
+        padding-left: 0
+    } ;
+    li {
+        padding: 10px 0;
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    span {
+        font-size: 12px;
+        font-weight: 500;
+        color: #837d7d;
+        margin-left: 15px
+    };
+}
+.list span:hover
+{
+    color: $purple;
+}
+
+.divider {
+    padding: 0%;
+    margin: 0;
+}
+
+.icon {
+    display: flex;
+    margin-right: 10px;
+    align-items: center;
+}
+
+.contentLeftSide {
+    display: flex;
+    height: fit-content;
+    align-items: center;
+}
+
+.contentRightSide {
+    height: fit-content;
+    display: flex;
+    gap: 5px;
+}
+
+.contentHeader {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: fit-content;
+}
+
+.downloadBtn,
+.addBtn,
+.importBtn {
+    justify-content: $center;
+    align-items: $center;
+    display: flex;
+}
+
+.downloadBtn {
+    width: 120px;
+    background-color: $hoverColor;
+
+    span {
+        color: $purple;
+        font-size: 10px;
+    }
+}
+
+.ri-download-line,
+.ri-upload-line {
+    color: $purple;
+    margin-right: 3px;
+    font-size: 10px;
+}
+
+.importBtn {
+    width: 80px;
+    background-color: $hoverColor;
+
+    span {
+        color: $purple;
+        font-size: 10px;
+    }
+}
+
+.addBtn {
+    background-color: $purple;
+
+    span {
+        color: $hoverColor;
+        font-size: 10px;
+    }
+}
+
+.ri-add-circle-fill {
+    color: $hoverColor;
+    margin-right: 3px;
+    font-size: 10px;
+}
+
+.subSubContent {
+    width: 100%;
+    display: inline-block;
+    margin-left: 10px;
+    margin-right: 5px;
+}
+

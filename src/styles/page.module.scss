@@ -10,12 +10,11 @@
 .col {
     display: flex;
     justify-content: center;
-
 }
 
 .row {
     align-items: $align-center;
-    height: $height;
+    height: 100%;
 }
 
 .logo {
@@ -52,7 +51,6 @@
     position: relative;
     display: $display-flex;
     align-items: $align-center;
-    // gap: 20%;
     width: $width;
     top: 110px;
     left: 90px;
@@ -72,7 +70,10 @@
     }
 
 }
-
+.ant-btn > span
+{
+font-size: 12px;
+}
 .hyrdd {
     color: $purble;
 }
@@ -80,7 +81,6 @@
 .text {
     font-size: 32px;
     margin-bottom: 0;
-    // margin-top: 27px;
 }
 
 .icons {
@@ -95,11 +95,13 @@
     position: relative;
     left: 110px;
     top: 120px;
-    width: 280px;
-    // display: flex;
+    
     // flex-direction: row;
 }
-
+.ant-form
+{
+width: 280px;
+}
 .login {
     .input {
         width: 100%;

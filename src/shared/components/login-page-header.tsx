@@ -1,4 +1,4 @@
-import { Col, Layout, Row, Button } from 'antd';
+import { Col, Layout, Row, Button, ConfigProvider } from 'antd';
 import styles from '../../styles/page.module.scss'
 import Image from 'next/image'
 import logo from '../../images/bloovo.jpg'
@@ -6,6 +6,13 @@ const { Header } = Layout;
 
 const AuthPageHeader = () => {
     return (
+        <ConfigProvider
+            theme={{
+                token: {
+                    colorPrimary: '#fff',
+                },
+            }}
+        >
         <Header className={styles.header}>
             <Row className={styles.row}>
 
@@ -19,6 +26,7 @@ const AuthPageHeader = () => {
                 </Col>
             </Row>
         </Header>
+        </ConfigProvider>
     )
 }
 

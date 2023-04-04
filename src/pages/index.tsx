@@ -25,7 +25,7 @@ const Home = () => {
         <Content className={styles.content} >
             <Row className={styles.displayRow}>
            <Welcome/>
-            <LoginForm/>
+              <LoginForm/>
           </Row>
         </Content>
         </div>

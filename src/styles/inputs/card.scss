@@ -1,0 +1,161 @@
+$purble: #8467ff;
+$f-w-500:500;
+$f-w-400: 400;
+.cards {
+    margin-top: 15px;
+
+
+.span1 {
+    font-weight: 400;
+    font-size: 12px;
+    margin-right: 2px;
+}    
+.span2
+{
+    font-weight: 700;
+    font-size: 12px;
+}
+.buttons
+{
+    display: flex;
+    gap: 5px;
+.rqsBtn
+{
+    padding: 0 10px;
+    height: 25px;
+    border-radius: 4px;
+    span
+    {
+    font-weight: $f-w-400;
+    font-size: 10px;
+    }
+}
+.iconsBtn
+{
+    $size:25px;
+    height:$size;
+    border-radius: 4px;
+    padding: 0;
+    display: flex;
+    width: $size;
+    justify-content: center;
+     .ri-more-2-fill,.ri-pencil-fill,.ri-delete-bin-line
+    {
+        margin: 0;
+        padding: 0;
+        justify-content: center;
+        align-items: center;
+        color: #000;
+    }
+}
+}
+.cardContent
+{
+    justify-content: space-between;
+    .cardLeftSide
+    {
+        div
+        {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 10px;
+        h5
+        {
+                margin: 0;
+                padding: 0;
+                font-weight: $f-w-500;
+        }
+        span{
+                font-size: 11px;       
+        }
+        }
+    }
+    .managers
+    {
+        h5 {
+        font-weight: 700;
+        margin: 0;
+        padding: 5px 0 ;
+        }
+        div 
+        {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 5px;
+            span
+            {
+                padding: 0 5px;
+                border-radius: 15px;
+                background-color: #f0faef;
+                font-size: 10px;
+                font-weight: $f-w-400;
+            }
+        }
+    }
+    .cardRightSide
+    {
+       display: flex;
+       flex-direction: column; 
+       align-items: flex-end;
+    .rightSideSpan1,.rightSideSpan2,.rightSideSpan3
+        {
+            font-size: 10px;
+            font-weight: $f-w-500;
+        }
+    .rightSideSpan1
+    {
+        color: rgb(80, 78, 78);
+    }
+    .rightSideSpan2 {
+        color:red;
+    }
+    .rightSideSpan3
+    {
+        color: rgb(9, 160, 248);
+    }
+    }
+}
+}
+.ant-card .ant-card-body
+{
+    padding: 10px 15px 15px 15px;
+    margin: 0 0 5px 0;
+
+}
+.ant-card .ant-card-head{
+    padding: 0 14px;
+    height: 0px;
+}
+.org{
+    color: $purble;
+}
+
+.infoDiv{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 20px;
+    .info {
+            border-radius: 5px;
+            background-image: linear-gradient(to right, #f1effa 10%, #f6f5fb 51%, #fcfcfe 100%);
+            padding: 10px 15px;
+            h5{
+                padding: 0;
+                margin: 0;
+            }
+            span
+            {
+                font-size: 11px;
+            }
+            .open
+            {
+                color: rgb(45, 201, 45);
+            }
+            .filled
+            {
+                color: red
+            }
+        }
+}
+
+

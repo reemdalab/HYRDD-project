@@ -1,29 +1,36 @@
 @import 'helpers.scss';
+@import 'inputs/content.scss';
+@import 'inputs/search.scss';
+@import 'inputs/card.scss';
+
 .layout {
-    background-color: $job-bg-color;
+    height: 100%;
 }
-.content
-{
+
+.content {
     background-color: #f2f3f8;
     padding: 0;
-    
+    position: relative;
 }
+
 .header {
     background-color: $primary;
-    padding: 0;
+    padding: 5px 0;
     height: $height;
     display: flex;
     align-items: $align-center;
     justify-content: $space-between;
 }
+
 .logo {
     display: $display-flex;
     align-content: $align-center;
 }
-.sider
-{
+
+.sider {
     margin-top: $margin-1px;
 }
+
 .lang {
     width: 48px;
     height: 25px;
@@ -34,36 +41,85 @@
     font-size: 12px;
     margin-right: 10px;
 }
-.details
-{
+.details {
     display: $display-flex;
     align-items: $align-center;
-    p{
+    p {
+        margin: 0;
         margin-right: 10px;
         font-size: 9px;
         font-weight: 600;
         margin-left: 10px;
+
     }
 }
-.DropdownIcon
-{
+.DropdownIcon {
     font-size: 8px;
     margin-right: 7px;
 }
-.margin
-{
+.margin {
     margin-right: $margin-10px;
     margin-left: 5px;
 }
-.infoIcon
-{
+
+.infoIcon {
     color: #4f5158;
     font-size: 11px;
     margin-right: 15px;
     font-weight: 600;
     margin-left: 8px;
 }
-.user
-{
+.user {
     margin-right: 5px;
+}
+.sider {
+    position: relative;
+
+    ul {
+        list-style-type: none;
+        padding: 0;
+        position: relative;
+        margin-left: 10px;
+        width: fit-content;
+    }
+
+    li {
+        justify-content: center;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        cursor: pointer;
+        margin-bottom: 4px;
+        border-radius: 5px;
+        width: 155px;
+    }
+
+    span {
+        color: #837d7d;
+        font-weight: 500;
+        font-size: 12px;
+    }
+}
+.active:hover{
+    background-color: $li-hover-color;
+    width: 90%;
+}
+.sider li:hover i
+{
+    color: $purble;
+}
+.sider li:hover span {
+    color: $purble;
+}
+.arrow {
+    right: 16px;
+    top: 22px;
+}
+
+.ant-layout .ant-layout-side {
+    background-color: #f2f3f8;
+}
+
+.subContent {
+    display: flex;
+    margin-top: 10px;
 }

@@ -11,7 +11,7 @@ const Headers=()=>
     return(
         <Header className={styles.header}>
             <Image id="logo" src={logo} className={styles.logo}
-                alt="logo" width="195" height="45" />
+                alt="logo" width="200" height="45" />
             <div className={styles.details}>
                 <Button className={styles.lang}>العربية</Button>
                 <BellOutlined className={styles.margin} />

@@ -1,0 +1,25 @@
+$icon-color:#837d7d;
+$font-size-15:15px;
+$margin-rt-10:10px;
+$margin-lf-5:5px;
+$li-hover-color: #d7d1fd;
+$purple: #8467ff;
+.ant-layout .ant-layout-sider-children {
+    background-color: #fff;
+    margin-top: 0;
+}
+.ant-btn >span
+{
+display: flex;
+justify-content: center;
+align-items: center;
+font-size: 9px;
+}
+.ri-dashboard-3-fill,.ri-briefcase-4-fill,.ri-folder-3-fill,.ri-building-2-fill
+,.ri-user-2-fill,.ri-settings-fill
+{
+    font-size: $font-size-15;
+    color: $icon-color;
+    margin-right: 10px;
+    margin-left: 5px;
+}
