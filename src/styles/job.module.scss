@@ -74,24 +74,6 @@
 .sider {
     position: relative;
 
-    // ul {
-    //     list-style-type: none;
-    //     padding: 0;
-    //     position: relative;
-    //     margin-left: 10px;
-    //     width: fit-content;
-    // }
-
-    // li {
-    //     justify-content: center;
-    //     padding-top: 10px;
-    //     padding-bottom: 10px;
-    //     cursor: pointer;
-    //     margin-bottom: 4px;
-    //     border-radius: 5px;
-    //     width: 155px;
-    // }
-
     span {
         color: #837d7d;
         font-weight: 500;
@@ -103,14 +85,6 @@
     background-color: $li-hover-color;
     width: 90%;
 }
-// .sider li:hover i
-// {
-//     color: $purble;
-// }
-// .sider li:hover span {
-//     color: $purble;
-// }
-
 .ant-layout .ant-layout-side {
     background-color: #f2f3f8;
 }

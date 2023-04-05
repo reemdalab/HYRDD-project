@@ -1,6 +1,5 @@
 import { Button, ConfigProvider, Layout, Menu } from 'antd';
 import styles from '../../styles/job.module.scss'
-import Link from 'next/link';
 import 'remixicon/fonts/remixicon.css'
 import { useEffect, useState } from 'react';
 import { LeftOutlined, RightOutlined } from '@ant-design/icons';
