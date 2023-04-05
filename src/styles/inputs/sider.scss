@@ -22,4 +22,57 @@ font-size: 9px;
     color: $icon-color;
     margin-right: 10px;
     margin-left: 5px;
+} 
+.ri-dashboard-3-fill.ant-menu-item-icon::before,.ri-briefcase-4-fill .ant-menu-item-icon::before
+,.ri-briefcase-4-fill.ant-menu-item-icon::before,.ri-folder-3-fill .ant-menu-item-icon::before,
+.ri-building-2-fill.ant-menu-item-icon::before,.ri-user-2-fill.ant-menu-item-icon::before
+{
+    font-size: $font-size-15;
+    color: $icon-color !important;
+    padding-left: 0;
 }
+// .ri-folder-3-fill.ant-menu-item-icon::before:hover{
+//     color: $purple;
+// }
+.ant-menu-item-selected {
+    background-color: $li-hover-color !important;
+}
+.ant-menu-item.ant-menu-item-active
+{
+        color: $icon-color !important;
+}
+.ant-menu-item.ant-menu-item-selected
+{
+    width: 90%;
+}
+.ant-menu-item.ant-menu-item-active
+{
+    width: 90%;
+}
+ .ant-menu-light.ant-menu-item-selected
+{
+    color: $purple !important;
+}
+.ant-menu-light.ant-menu-item-selected
+{
+        color: $purple;
+}
+.ri-folder-3-fill .ant-menu-item-icon::before{
+    color: $purple;
+}
+.ant-menu-light
+{
+    color: $icon-color !important;}
+
+.ant-menu-inline.ant-menu-root .ant-menu-item>.ant-menu-title-content
+{
+    margin-left: 0;
+    color: $purple;
+}
+.site-layout-background
+{
+    right: 18px;
+    top: 10px;
+}
+.ant-menu-light>.ant-menu
+{color: #837d7d;}

@@ -1,0 +1,16 @@
+{
+    "cards": [
+    {
+        "id": 95,
+        "organizer": "sadeq org",
+        "units": "unit1,unit2",
+        "managers":["Ahm Hire1","Hm sadeq"]
+    },
+    {
+        "id": 95,
+        "organizer": "sadeq org",
+        "units": "unit1",
+        "managers": ["Ahm Hire1","Hm sadeq"]
+    }
+]
+}

@@ -1,13 +1,21 @@
-import { Layout } from 'antd';
+import { Button, ConfigProvider, Layout, Menu } from 'antd';
 import styles from '../../styles/job.module.scss'
 import Link from 'next/link';
 import 'remixicon/fonts/remixicon.css'
-import { useEffect } from 'react';
-const { Sider } = Layout;
+import { useEffect, useState } from 'react';
+import { LeftOutlined, RightOutlined } from '@ant-design/icons';
+import JobContent from '../components/content';
+const { Sider, Content } = Layout;
+interface Props {
+    children: React.ReactNode;
+}
+const Sidebar = ({ children }: Props) => {
+    const [collapsed, setCollapsed] = useState<boolean>(false);
+    const toggle = () => {
+        setCollapsed(!collapsed);
+    };
 
-const Sidebar =()=>
-{
-    useEffect(() => {
+ useEffect(() => {
         const myElement = document.querySelector(`.${styles.active}`) as HTMLElement;
         if (myElement) {
             myElement.classList.add('active');
@@ -15,60 +23,66 @@ const Sidebar =()=>
     }, []);
 
     return(
-        <Sider className={styles.sider} width={180}
-            collapsedWidth={0}
-            trigger={null}
-        >
-            <ul>
-                <li className={styles.active}>
-                    <Link href="/" className={styles.item}>
-                        <i className="ri-dashboard-3-fill"></i>
-                        <span>
-                            Dashboard
-                        </span>
-                    </Link>
-                </li>
-                <li className={styles.active}>
-                    <i className="ri-briefcase-4-fill" ></i>
-                    <Link href="/jobs" className={styles.item}>
-                        <span>Jobs</span>
-                    </Link>
-                </li>
-                <li className={styles.active}>
-                    <i className="ri-folder-3-fill"></i>
-                    <Link href="/" className={styles.item}>
-                        <span>
-                            Folders
-                        </span>
-                    </Link>
-                </li>
-                <li className={styles.active}>
-                    <i className="ri-building-2-fill"></i>
-                    <Link href="/">
-                        <span>
-                            Agencies
-                        </span>
-                    </Link>
-                </li>
-                <li className={styles.active}>
-                    <i className="ri-user-2-fill" ></i>
-                    <Link href="/">
-                        <span>
-                            Candidates Search
-                        </span>
-                    </Link>
-                </li>
-                <li className={styles.active}>
-                    <i className="ri-settings-fill"></i>
-                    <Link href="/">
+        <Layout>
+        <Sider width={180}
+            trigger={null} collapsible collapsed={collapsed} className={styles.sider}>
+            <div className="logo" />
+            <Menu mode="inline" defaultSelectedKeys={['1']} selectedKeys={['2']}>
+                <Menu.Item className={styles.item} key="1" icon={<i className="ri-dashboard-3-fill"></i>}>
+                    <span>
+                        Dashboard
+                    </span>
+                </Menu.Item>
+                <Menu.Item className={styles.item} key="2" icon={<i className="ri-briefcase-4-fill" ></i>}>
+                    <span>Jobs</span>
+                </Menu.Item>
+                <Menu.Item className={styles.item} key="3" icon={<i className="ri-folder-3-fill"></i>}>
+                    <span>
+                        Folders
+                    </span>
+                </Menu.Item>
+                <Menu.Item className={styles.item} key="4" icon={<i className="ri-building-2-fill"></i>}>
+                    <span>
+                        Agencies
+                    </span>
+                </Menu.Item>
+                <Menu.Item className={styles.item} key="5" icon={<i className="ri-user-2-fill" ></i>}>
+                    <span>
+                        Candidates Search
+                    </span>
+                </Menu.Item>
+                    <Menu.Item className={styles.item} key="6" icon={<i className="ri-settings-fill"></i>}>
                         <span>
                             Settings
                         </span>
-                    </Link>
-                </li>
-                
-            </ul>
+                    </Menu.Item>
+            </Menu>
+            
         </Sider>
+            <ConfigProvider
+                theme={{
+                    token: {
+                        colorPrimary: '#7b67fe',
+                    },
+                }}
+            >
+            <Button className="site-layout-background" shape='circle' size='small'>
+                {collapsed ? (
+                    <RightOutlined className="trigger" onClick={toggle} />
+                ) : (
+                    <LeftOutlined className="trigger" onClick={toggle} />
+                )}
+            </Button>
+            </ConfigProvider>
+        <Layout className="site-layout">
+                <Content>
+                    <div className="site-layout-background" >
+                   <JobContent/>
+                   {children}
+                    </div>
+                </Content>
+            </Layout>
+         </Layout>
     )
 }
 export default Sidebar;

@@ -12,6 +12,7 @@ import village from '../../images/village.png'
 import conv from '../../images/conversation.png'
 import dart from '../../images/darts-game.png'
 import { Col, Row, Button } from 'antd'
+import Link from 'next/link'
 const Welcome =()=>
 {
 return(
@@ -72,8 +73,9 @@ return(
         <div className={styles.welcomeDiv}>
             <h1 className={styles.text} >Hi! <br />Welcome back to<br /><span className={styles.hyrdd} >HYRDD!</span></h1>
             <p className={styles.p}>if you don<span>&apos;</span>t have an account, you can
-                <Button className={styles.register}
-                    type="link" >Register here!</Button>
+                {/* <Button className={styles.register}
+                    type="link" >Register here!</Button> */}
+                <Link className={styles.register}  href={'/'}>Register here!</Link>
             </p>
         </div>
     </Col>

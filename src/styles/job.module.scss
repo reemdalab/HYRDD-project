@@ -30,7 +30,6 @@
 .sider {
     margin-top: $margin-1px;
 }
-
 .lang {
     width: 48px;
     height: 25px;
@@ -75,23 +74,23 @@
 .sider {
     position: relative;
 
-    ul {
-        list-style-type: none;
-        padding: 0;
-        position: relative;
-        margin-left: 10px;
-        width: fit-content;
-    }
+    // ul {
+    //     list-style-type: none;
+    //     padding: 0;
+    //     position: relative;
+    //     margin-left: 10px;
+    //     width: fit-content;
+    // }
 
-    li {
-        justify-content: center;
-        padding-top: 10px;
-        padding-bottom: 10px;
-        cursor: pointer;
-        margin-bottom: 4px;
-        border-radius: 5px;
-        width: 155px;
-    }
+    // li {
+    //     justify-content: center;
+    //     padding-top: 10px;
+    //     padding-bottom: 10px;
+    //     cursor: pointer;
+    //     margin-bottom: 4px;
+    //     border-radius: 5px;
+    //     width: 155px;
+    // }
 
     span {
         color: #837d7d;
@@ -99,21 +98,18 @@
         font-size: 12px;
     }
 }
+
 .active:hover{
     background-color: $li-hover-color;
     width: 90%;
 }
-.sider li:hover i
-{
-    color: $purble;
-}
-.sider li:hover span {
-    color: $purble;
-}
-.arrow {
-    right: 16px;
-    top: 22px;
-}
+// .sider li:hover i
+// {
+//     color: $purble;
+// }
+// .sider li:hover span {
+//     color: $purble;
+// }
 
 .ant-layout .ant-layout-side {
     background-color: #f2f3f8;
@@ -123,3 +119,4 @@
     display: flex;
     margin-top: 10px;
 }
+ 

@@ -6,8 +6,7 @@ $center: center;
 .list {
     width: 220px;
     background-color: $primary;
-    margin-left: -12px;
-    height: 100%;
+    margin-left: -15px;
     border-radius: 5px;
 
     ul {
@@ -56,14 +55,12 @@ $center: center;
     display: flex;
     gap: 5px;
 }
-
 .contentHeader {
     display: flex;
     justify-content: space-between;
     width: 100%;
     height: fit-content;
 }
-
 .downloadBtn,
 .addBtn,
 .importBtn {
@@ -71,7 +68,6 @@ $center: center;
     align-items: $center;
     display: flex;
 }
-
 .downloadBtn {
     width: 120px;
     background-color: $hoverColor;

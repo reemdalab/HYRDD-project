@@ -1,8 +1,7 @@
 import styles from '../styles/page.module.scss'
 import { GetStaticProps } from 'next';
-import { Col, ConfigProvider, Layout, Row, Button, Checkbox, Form, Input } from 'antd';
+import {  Layout, Row} from 'antd';
 import React, { useEffect, useState } from 'react';
-import Link from 'next/link'
 import AuthPageHeader from '@/shared/components/login-page-header'
 import Welcome from '@/shared/components/welcome-component'
 import LoginForm from '@/shared/components/login-form';

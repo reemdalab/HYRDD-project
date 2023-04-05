@@ -1,5 +1,6 @@
 import { Form, Input, Checkbox, Button, ConfigProvider,Col } from "antd";
 import styles from '../../styles/page.module.scss'
+import Link from "next/link";
 
 const LoginForm=()=>
 {
@@ -36,10 +37,15 @@ const LoginForm=()=>
                             name="password"
                             rules={[{ required: true, message: 'Required Field' }]}
                         >
+                            <div className={styles.wrapedDiv}>
                             <Input
                                 type="password"
                                 placeholder="Enter Your Password"
                             />
+                                <Button
+                                    type="link" className={styles.forgetPass}>
+                                    Forget Password?</Button>
+                            </div>
                         </Form.Item>
                         <Form.Item>
                             <Form.Item name="remember" valuePropName="checked" noStyle>
@@ -51,14 +57,14 @@ const LoginForm=()=>
                         </Form.Item>
                         <Form.Item>
                             <Button className={styles.sign} type="primary" htmlType="submit" href="/jobs"
-                            >Sign In</Button>
+                            ><span style={{fontSize:'13px'}}>Sign In</span></Button>
                         </Form.Item>
                     </Form>
                 </ConfigProvider>
                 <div className={styles.passDiv}>
-                    <Button 
-                    type="link" className={styles.forgetPass}>
-                        Forget Password?</Button>
+                 
+                    {/* <Link className={styles.forgetPass} href={'/'}>Register here!</Link> */}
+
                 </div>
             </div>
         </Col>
