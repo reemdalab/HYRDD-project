@@ -1,8 +1,4 @@
-$purble:#7b67fe;
-$center:center;
-$primary:#fff;
-$hoverColor:#e6e5f5;
-$display-flex:flex;
+@import '../helpers.scss';
 .search
 {
     width: 210px;
@@ -61,4 +57,78 @@ $display-flex:flex;
     color: $purble;
     margin: 0;
     padding: 0;
+}
+
+.searchBtn,
+.refreshBtn
+{
+    @include xs {
+            margin-left: 0;
+            margin-right:5px;
+        }
+    
+        @include sm {
+            margin-left: 5;
+            margin-right: 2px;
+        }
+    
+        @include md {
+            margin-left: 5;
+            margin-right:2px;
+                }
+    
+        @include lg {
+                margin-left: 5;
+                margin-right: 2px;
+        }
+    
+        @include xl {
+                margin-left: 5;
+                margin-right: 2px;
+        }
+    }
+    
+.search
+{
+    @include xs {
+        width: 30%;
+        }
+    
+        @include sm {
+        width: 210px;
+        }
+    
+        @include md {
+        width: 210px;
+        }
+    
+        @include lg {
+        width: 210px;
+        }
+    
+        @include xl {
+        width: 210px;
+        }
+}
+.filter
+{
+     @include xs {
+        margin-left:2px ;
+        }
+    
+        @include sm {
+       margin-left:10px ;
+        }
+    
+        @include md {
+         margin-left:10px ;
+        }
+    
+        @include lg {
+         margin-left:10px ;
+        }
+    
+        @include xl {
+         margin-left:10px ;
+        } 
 }

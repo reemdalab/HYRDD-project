@@ -1,0 +1,43 @@
+{
+    "cards": [
+        {
+            "id": 93,
+            "OrganizationStructure": "sadeq org",
+            "units": "unit1,unit2",
+            "managers":["Ahm Hire1","Ihab Hajji"],
+            "RequisitionType": "New vacancy",
+            "jobType": "Sales Manager",
+            "TotalBudgetVacancies":1,
+            "VacanciesstillOpen":1,
+            "VacanciesFilled":0
+        },
+        {
+            "id":95,
+            "OrganizationStructure": "sadeq org",
+            "units":"unit1",
+            "managers": [
+                "Reem Dalab",
+                "Ihab Hajji"
+            ],
+            "RequisitionType":"New vacancy",
+            "jobType":"Sales Manager",
+            "TotalBudgetVacancies": 23,
+            "VacanciesstillOpen": 0,
+            "VacanciesFilled":0
+        },
+        {
+            "id": 94,
+            "OrganizationStructure": "sadeq org",
+            "units":"unit1",
+            "managers": [
+                "Dana Est",
+                "Ihab Hajji"
+            ],
+            "RequisitionType": "New vacancy",
+            "jobType": "Sales Manager",
+            "TotalBudgetVacancies":4,
+            "VacanciesstillOpen": 1,
+            "VacanciesFilled": 0
+        }
+    ]
+}

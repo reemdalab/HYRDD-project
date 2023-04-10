@@ -1,0 +1,17 @@
+.ant-dropdown
+{
+    top:0;
+    width: 100px;
+}
+
+.ant-dropdown-menu-submenu .ant-dropdown-menu{
+width: 100px;
+}
+.ant-dropdown-menu-title-content
+{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    font-size: 12px;
+    font-weight: 500;
+}

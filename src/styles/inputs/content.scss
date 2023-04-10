@@ -1,7 +1,5 @@
-$primary: #fff;
-$purple: #7b67fe;
-$hoverColor: #e6e5f5;
-$center: center;
+@import '../breakpoints.scss';
+@import '../helpers.scss';
 
 .list {
     width: 220px;
@@ -19,6 +17,9 @@ $center: center;
         padding: 10px 0;
         display: flex;
         justify-content: space-between;
+        .selectedItem {
+                color: $purble;
+            }
     }
     
     span {
@@ -28,9 +29,10 @@ $center: center;
         margin-left: 15px
     };
 }
+
 .list span:hover
 {
-    color: $purple;
+    color: $purble;
 }
 
 .divider {
@@ -47,6 +49,11 @@ $center: center;
     display: flex;
     height: fit-content;
     align-items: center;
+    div
+    {
+        display: flex;
+        margin-left: 5px;
+    }
 }
 
 .contentRightSide {
@@ -56,6 +63,7 @@ $center: center;
 }
 .contentHeader {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     width: 100%;
     height: fit-content;
@@ -72,14 +80,14 @@ $center: center;
     background-color: $hoverColor;
 
     span {
-        color: $purple;
+        color: $purble;
         font-size: 10px;
     }
 }
 
 .ri-download-line,
 .ri-upload-line {
-    color: $purple;
+    color: $purble;
     margin-right: 3px;
     font-size: 10px;
 }
@@ -89,13 +97,13 @@ $center: center;
     background-color: $hoverColor;
 
     span {
-        color: $purple;
+        color: $purble;
         font-size: 10px;
     }
 }
 
 .addBtn {
-    background-color: $purple;
+    background-color: $purble;
 
     span {
         color: $hoverColor;
@@ -108,7 +116,10 @@ $center: center;
     margin-right: 3px;
     font-size: 10px;
 }
-
+.subContent {
+    display: flex;
+    margin-top: 10px;
+}
 .subSubContent {
     width: 100%;
     display: inline-block;
@@ -116,3 +127,121 @@ $center: center;
     margin-right: 5px;
 }
 
+.list{
+    @include xs {
+        display: none;
+        }
+    
+     @include sm {
+        display: none;
+            }
+    
+    @include md {
+        display: block !important;
+        }
+    
+            @include lg {
+        display: block !important;   
+        }
+    
+            @include xl {
+        display: block !important;
+        }
+}
+.subSubContent
+{
+@include xs {
+    margin-left: 0;
+}
+
+    @include sm {
+        margin-left: 0px;
+    }
+
+    @include md {
+        margin-left: 10px;
+        }
+
+    @include lg {
+        margin-left: 10px;
+        }
+
+    @include xl {
+        margin-left: 10px;
+        }
+     }
+
+    .contentLeftSide
+    {
+         @include xs {
+           display: flex;
+           flex-wrap:wrap ;
+        }
+    
+        @include sm {
+            flex-wrap:wrap ;
+        }
+    
+        @include md {
+        flex-wrap: nowrap;
+        margin-bottom: 5px;
+        }
+    
+        @include lg {
+         flex-wrap: nowrap;
+        }
+    
+        @include xl {
+        flex-wrap: nowrap;
+        }
+    }
+    .contentRightSide {
+    @include xs {
+        flex-wrap: wrap;
+        margin-top: 5px;
+    }
+
+    @include sm {
+        flex-wrap: wrap;
+        margin-top: 0px;
+    }
+
+    @include md {
+        flex-wrap: wrap;
+        margin-top: 0px;
+    }
+
+    @include lg {
+        flex-wrap: wrap;
+        margin-top: 0px;
+    }
+
+    @include xl {
+        flex-wrap: wrap;
+        margin-top: 0px;
+    }
+
+    }
+
+    .subContent
+    {
+        @include xs {
+             margin-left: -10px;
+            }
+        
+            @include sm {
+            margin-left: -10px;
+            }
+        
+            @include md {
+            margin-left: 0px;
+            }
+        
+            @include lg {
+            margin-left: 0px;
+            }
+        
+            @include xl {
+            margin-left: 0px;
+            }
+    }

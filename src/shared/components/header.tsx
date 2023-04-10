@@ -1,13 +1,48 @@
-import logo from '../../images/bloovo.jpg'
-import person from '../../images/person.png'
-import styles from '../../styles/job.module.scss'
+import logo from '@/images/bloovo.jpg'
+import person from '@/images/person.png'
+import styles from '@/styles/job.module.scss'
 import Image from 'next/image'
-import { Layout ,Button } from 'antd';
-import { BellOutlined, QuestionCircleOutlined, CaretDownOutlined } from '@ant-design/icons'
-
+import { Layout, Button, Dropdown, MenuProps } from 'antd';
+import { BellOutlined, QuestionCircleOutlined, CaretDownOutlined, UserOutlined, LogoutOutlined } from '@ant-design/icons'
+import { useRouter } from 'next/router';
 const { Header } = Layout;
+
 const Headers=()=>
 {
+    const router = useRouter();
+    const { username , email , id} = router.query;
+
+    const handleClick = () => {
+        router.push({
+            pathname: "/profile",
+            query: {
+                username: username,
+                email:email,
+                id:id
+            }
+        });
+    };
+    const items: MenuProps['items'] = [
+        {
+            key: '1',
+            label: (
+                <a target="_blank" rel="noopener noreferrer" onClick={handleClick}>
+                    Profile
+                </a>
+            ),
+            icon: <UserOutlined />
+
+        },
+        {
+            key: '2',
+            label: (
+                <a target="_blank" rel="noopener noreferrer" href="/" >
+                    Log out
+                </a>
+            ),
+            icon: <LogoutOutlined />
+        }
+    ];
     return(
         <Header className={styles.header}>
             <Image id="logo" src={logo} className={styles.logo}
@@ -16,10 +51,14 @@ const Headers=()=>
                 <Button className={styles.lang}>العربية</Button>
                 <BellOutlined className={styles.margin} />
                 <QuestionCircleOutlined className={styles.infoIcon} />
-                <p> Admin Admin Admin</p>
+                <p>{username}</p>
                 <Image id="user" src={person} className={styles.user}
                     alt="user" height="26" width="27" />
-                <CaretDownOutlined className={styles.DropdownIcon} />
+                <Dropdown className={styles.dropDownBtn} menu={{ items }}>
+                    <a onClick={(e) => e.preventDefault()}>
+                        <CaretDownOutlined className={styles.DropdownIcon}/>
+                    </a>
+                </Dropdown>
             </div>
         </Header>
     )

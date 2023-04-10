@@ -1,16 +1,11 @@
-$icon-color:#837d7d;
-$font-size-15:15px;
-$margin-rt-10:10px;
-$margin-lf-5:5px;
-$li-hover-color: #d7d1fd;
-$purple: #8467ff;
+@import '../helpers.scss';
 .ant-layout .ant-layout-sider-children {
     background-color: #fff;
     margin-top: 0;
 }
 .ant-btn >span
 {
-display: flex;
+display: $display-flex;
 justify-content: center;
 align-items: center;
 font-size: 9px;
@@ -41,21 +36,28 @@ font-size: 9px;
 .ant-menu-item.ant-menu-item-selected
 {
     width: 90%;
+    height: 35px;
+    border-radius: 5px;
 }
 .ant-menu-item.ant-menu-item-active
 {
     width: 90%;
 }
- .ant-menu-light.ant-menu-item-selected
-{
-    color: $purple !important;
+.ant-menu .ant-menu-item .ant-menu-item-icon{
+    vertical-align:0
 }
-.ant-menu-light.ant-menu-item-selected
+.ant-menu-item-selected
 {
-        color: $purple;
+    .ri-briefcase-4-fill.ant-menu-item-icon::before
+    {
+            color: $purble !important;
+    }
+    .ant-menu-title-content span{
+        color: $purble !important;
+    }
 }
 .ri-folder-3-fill .ant-menu-item-icon::before{
-    color: $purple;
+    color: $purble;
 }
 .ant-menu-light
 {
@@ -64,7 +66,7 @@ font-size: 9px;
 .ant-menu-inline.ant-menu-root .ant-menu-item>.ant-menu-title-content
 {
     margin-left: 0;
-    color: $purple;
+    color: $purble;
 }
 .site-layout-background
 {
@@ -72,4 +74,4 @@ font-size: 9px;
     top: 10px;
 }
 .ant-menu-light>.ant-menu
-{color: #837d7d;}
+{color: $icon-color;}

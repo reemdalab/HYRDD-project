@@ -1,3 +1,5 @@
+@import '../helpers.scss';
+
 .ant-form {
     width: 280px;
 .ant-btn>span {
@@ -7,4 +9,12 @@
 
 .passDiv .ant-btn>span {
     font-size: 13px !important;
+}
+.password
+{
+    width: 100% !important;
+    .link
+    {
+        color:$textColor;
+    }
 }

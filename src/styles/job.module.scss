@@ -2,6 +2,7 @@
 @import 'inputs/content.scss';
 @import 'inputs/search.scss';
 @import 'inputs/card.scss';
+@import 'breakpoints.scss';
 
 .layout {
     height: 100%;
@@ -29,6 +30,13 @@
 
 .sider {
     margin-top: $margin-1px;
+    .ant-menu-title-content{
+        color: aqua;
+    }
+}
+.ant-menu-inline.ant-menu-root .ant-menu-item>.ant-menu-title-content
+{
+    color: aqua;
 }
 .lang {
     width: 48px;
@@ -40,22 +48,30 @@
     font-size: 12px;
     margin-right: 10px;
 }
+
 .details {
     display: $display-flex;
     align-items: $align-center;
+    height: inherit;
     p {
         margin: 0;
         margin-right: 10px;
         font-size: 9px;
         font-weight: 600;
         margin-left: 10px;
-
+        display: flex;
+        flex-wrap: wrap;
+        height: fit-content;
     }
 }
+
 .DropdownIcon {
     font-size: 8px;
-    margin-right: 7px;
+    margin-right: 10px;
+    color: $black;
 }
+
+
 .margin {
     margin-right: $margin-10px;
     margin-left: 5px;
@@ -68,9 +84,11 @@
     font-weight: 600;
     margin-left: 8px;
 }
+
 .user {
     margin-right: 5px;
 }
+
 .sider {
     position: relative;
 
@@ -81,16 +99,140 @@
     }
 }
 
-.active:hover{
+.active:hover {
     background-color: $li-hover-color;
     width: 90%;
 }
+
 .ant-layout .ant-layout-side {
     background-color: #f2f3f8;
 }
 
-.subContent {
-    display: flex;
-    margin-top: 10px;
+
+header{
+.logo {
+        @include xs {
+            width: 150px;
+            height: 35px;
+            margin-right: 1;
+        }
+
+        @include sm {
+            width: 150px;
+            height: 35px;
+        }
+
+        @include md {
+            width: 200px;
+            height: 45px;
+        }
+
+        @include lg {
+            width: 200px;
+            height: 45px;
+            margin-left: 10px;
+        }
+
+        @include xl {
+            width: 200px;
+            height: 45px;
+            margin-left: 10px;
+        }
+    }
+    .details {
+    .lang
+    {
+    @include xs {
+           display: none;
+    } 
+     @include sm {
+        display: flex;
+    }
+     @include md {
+        display: flex;
+            }
+    @include lg {
+        display: flex;
+            }
+    
+    @include xl {
+        display: flex;
+        }
+    }
+    p{
+      @include xs {
+        margin-left: 1px;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+    }
+
+    @include sm {
+        margin-left: 1px;
+        text-align: center;
+        justify-content: center;
+    }
+    @include md {
+        margin-right: 10px;
+            margin-left: 10px;
+        }
+    @include lg {
+        margin-right: 10px;
+            margin-left: 10px;
+        }
+    
+    @include xl {
+        margin-right: 10px;
+            margin-left: 10px;
+    }
+    }
+    .margin{
+        
+        @include xs {
+            margin-right: 3px;
+        }
+        @include sm{
+        margin-right: $margin-10px;
+        margin-left: 5px;
+        }
+        @include md{
+        margin-right: $margin-10px;
+        margin-left: 5px;
+        }
+        @include lg{
+        margin-right: $margin-10px;
+        margin-left: 5px;
+        }
+        @include xl
+        {
+        margin-right: $margin-10px;
+        margin-left: 5px;
+        }
+    }
+    .infoIcon
+    {
+        @include xs {
+            margin-right: 3px;
+            margin-left: 3px;
+        }
+         @include sm{
+        margin-right: 15px;
+            margin-left: 8px;
+        }
+        @include md{
+        margin-right: 15px;
+            margin-left: 8px;
+        }
+        @include lg{
+        margin-right: 15px;
+        margin-left: 8px;
+        }
+        @include xl
+        {
+        margin-right: 15px;
+        margin-left: 8px;
+        }
+    }
 }
- 
+}
+       

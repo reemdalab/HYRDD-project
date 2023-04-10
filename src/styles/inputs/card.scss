@@ -2,8 +2,8 @@ $purble: #8467ff;
 $f-w-500:500;
 $f-w-400: 400;
 .cards {
-    margin-top: 15px;
-.span1 {
+    margin-top: 10px;
+ .span1 {
     font-weight: 400;
     font-size: 12px;
     margin-right: 2px;
@@ -155,5 +155,110 @@ $f-w-400: 400;
             }
         }
 }
+.ant-card-head-wrapper{
+        flex-wrap: wrap;
+        margin-bottom: 0;
+            .ant-card-head-title
+            {
+                flex-wrap: wrap;
+                div{
+                    width: fit-content;
+                }
+            }
+}
 
+.cardContent
+{
+    @include xs{
+        display: flex;
+        flex-direction: column;
+        }
+    @include sm{
+        display: flex;
+        flex-direction: column; 
+       }
+    @include md{
+        display: flex;
+        flex-direction: column;
+        }
+    @include lg{
+        display: flex;
+        flex-direction: row;
+        }
+    @include xl{
+        display: flex;
+        flex-direction: row;
+    }
+}
+.cardContent
+{
+  .cardRightSide {
+      @include xs {
+        display: flex;
+            align-items: flex-start !important;
+            margin-top: 5px;
+      }
 
+      @include sm {
+        display: flex;
+            align-items: flex-start !important;
+            margin-top: 5px;
+      }
+
+      @include md {
+          display: flex;
+          align-items: flex-end !important;
+          margin-top: 5px;
+      }
+
+      @include lg {
+          display: flex;
+          align-items: flex-end !important;
+          margin-top: 0px;
+      }
+
+      @include xl {
+        display: flex;
+          align-items: flex-end !important;
+          margin-top: 0px;
+      }
+  }
+}
+
+.ant-card-head-wrapper
+{
+    @include xs{
+        display: block !important;
+        margin-bottom: 7px !important;
+     }
+    @include sm{
+        display: flex !important;
+    }
+    @include md{
+        display: flex !important;
+        }
+    @include lg{
+        display: flex !important;
+        }
+    @include xl{
+        display: flex !important;
+        }   
+}
+.infoDiv
+{
+    @include xs{
+       flex-direction: column;
+     }
+    @include sm{
+    flex-direction: column;
+    }
+    @include md{
+    flex-direction: row;
+        }
+    @include lg{
+    flex-direction: row;
+        }
+    @include xl{
+        flex-direction: row;
+        }    
+}
