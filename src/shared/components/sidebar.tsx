@@ -1,6 +1,5 @@
-import { Button, ConfigProvider, Layout, Menu, } from 'antd';
-import styles from '../../styles/job.module.scss'
-import 'remixicon/fonts/remixicon.css'
+import { Button , Layout, Menu, } from 'antd';
+import styles from '@/styles/job.module.scss'
 import {  useEffect, useState } from 'react';
 import { LeftOutlined, RightOutlined, MenuOutlined } from '@ant-design/icons';
 import JobContent from './content';
@@ -33,7 +32,7 @@ const Sidebar: NextPage<Props> = ({ children, mycard }) => {
     }, []);
     console.log("sidebar", mycard);
     return (
-        <Layout>
+        <Layout className='sidebar'>
             <Sider width={180}
                 trigger={null} collapsible collapsed={collapsed} className={styles.sider}>
                 <div className="logo" />

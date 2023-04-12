@@ -1,0 +1,90 @@
+
+@import'../helpers.scss' ;
+.menu{
+    border-radius: 5px;
+    align-items: center;
+    justify-content: center;
+    margin-left: $left-13 !important;
+            width: 240px !important;
+    .ant-menu.ant-menu-root{
+        }
+    .ant-menu-title-content{
+        color: gray;
+    }
+   .ant-menu-item-selected
+        {
+        background-color: transparent !important;
+        .ant-menu-title-content
+        {
+        color: #8467ff !important;
+        }
+        }
+  .ant-menu-item.ant-menu-item-only-child.item
+  {
+        background-color: transparent !important;
+  }
+}
+
+.ant-menu-item.ant-menu-item-only-child.item,.ant-menu-submenu-title
+{
+padding-left: 10px !important;
+}
+
+.anticon.anticon-plus.ant-menu-submenu-expand-icon
+{
+    color: gray;
+}
+
+.ant-menu-item-selected
+{
+background-color: none !important;
+}
+
+.ant-menu-light .ant-menu-submenu-selected>.ant-menu-submenu-title
+{
+    color: gray;
+}
+
+.ant-menu-inline.ant-menu-root .ant-menu-item>.ant-menu-title-content
+{
+    color: gray;
+}
+
+.ant-menu-item .ant-menu-item-active .ant-menu-item-selected .ant-menu-item-only-child
+{
+background-color: none !important;
+}
+
+.ant-menu-item .ant-menu-item-active .ant-menu-item-selected .ant-menu-item-only-child:hover
+ {
+background-color: none !important;
+}
+
+.ant-menu-submenu.ant-menu-submenu-inline.ant-menu-submenu-open.ant-menu-submenu-active:hover
+{
+background-color: none !important;
+}
+
+.ant-menu-inline.ant-menu-root .ant-menu-submenu-title>.ant-menu-title-content
+{
+color: gray;
+}
+
+.ant-menu-submenu .ant-menu-submenu-inline .ant-menu-submenu-open .ant-menu-submenu-active
+{
+background-color: none !important;
+}
+
+.menu-item:hover {
+    background-color: none;
+}
+
+ .item:hover 
+ {
+     background-color: none;
+ }
+
+ .anticon.anticon-plus.ant-menu-submenu-expand-icon:hover
+ {
+    color: #8467ff;
+ }

@@ -2,7 +2,6 @@ import styles from '../styles/job.module.scss';
 import { Layout } from 'antd';
 import Headers from '@/shared/components/header'
 import { useEffect, useState } from 'react'
-import 'remixicon/fonts/remixicon.css'
 import Sidebar from '../shared/components/sidebar';
 import MyCard from '@/shared/components/cards';
 import { NextPage } from 'next';

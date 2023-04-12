@@ -1,6 +1,6 @@
 import styles from '../styles/page.module.scss'
 import {Col, Layout, Row} from 'antd';
-import React, { useEffect, useReducer, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import AuthPageHeader from '@/shared/components/login-page-header'
 import Welcome from '@/shared/components/welcome-component'
 import LoginForm from '@/shared/components/login-form';

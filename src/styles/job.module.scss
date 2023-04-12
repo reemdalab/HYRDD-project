@@ -30,14 +30,11 @@
 
 .sider {
     margin-top: $margin-1px;
-    .ant-menu-title-content{
-        color: aqua;
-    }
 }
-.ant-menu-inline.ant-menu-root .ant-menu-item>.ant-menu-title-content
-{
-    color: aqua;
-}
+// .ant-menu-inline.ant-menu-root .ant-menu-item>.ant-menu-title-content
+// {
+//     color: aqua;
+// }
 .lang {
     width: 48px;
     height: 25px;

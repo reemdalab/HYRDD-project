@@ -3,8 +3,10 @@ import person from '@/images/person.png'
 import styles from '@/styles/job.module.scss'
 import Image from 'next/image'
 import { Layout, Button, Dropdown, MenuProps } from 'antd';
-import { BellOutlined, QuestionCircleOutlined, CaretDownOutlined, UserOutlined, LogoutOutlined } from '@ant-design/icons'
+import { BellOutlined, QuestionCircleOutlined, CaretDownOutlined,
+         UserOutlined, LogoutOutlined } from '@ant-design/icons'
 import { useRouter } from 'next/router';
+import Link from 'next/link';
 const { Header } = Layout;
 
 const Headers=()=>
@@ -26,7 +28,7 @@ const Headers=()=>
         {
             key: '1',
             label: (
-                <a target="_blank" rel="noopener noreferrer" onClick={handleClick}>
+                <a rel="noopener noreferrer" onClick={handleClick}>
                     Profile
                 </a>
             ),
@@ -36,9 +38,9 @@ const Headers=()=>
         {
             key: '2',
             label: (
-                <a target="_blank" rel="noopener noreferrer" href="/" >
+                <Link rel="noopener noreferrer" href="/" >
                     Log out
-                </a>
+                </Link>
             ),
             icon: <LogoutOutlined />
         }

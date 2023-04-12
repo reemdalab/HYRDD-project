@@ -1,5 +1,7 @@
 @import '../helpers.scss';
-.ant-layout .ant-layout-sider-children {
+
+.ant-layout .ant-layout-sider-children 
+{    
     background-color: #fff;
     margin-top: 0;
 }
@@ -38,6 +40,8 @@ font-size: 9px;
     width: 90%;
     height: 35px;
     border-radius: 5px;
+    display: flex;
+    align-items: center;
 }
 .ant-menu-item.ant-menu-item-active
 {
@@ -74,4 +78,11 @@ font-size: 9px;
     top: 10px;
 }
 .ant-menu-light>.ant-menu
-{color: $icon-color;}
+{
+    color: $icon-color;
+}
+.ant-menu-item
+{
+    display: flex;
+    align-items: center;
+}

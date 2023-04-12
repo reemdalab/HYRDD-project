@@ -1,8 +1,8 @@
-import { Form, Input, Checkbox, Button, ConfigProvider, Col, Space, Row, Typography } from "antd";
+import { Form, Input, Checkbox, Button, Space, Row, Typography } from "antd";
 import styles from '@/styles/page.module.scss'
 import users from "@/../data.json";
 import Users from "./users";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import { FormattedMessage, useIntl } from "react-intl";
 import Link from "next/link";
@@ -14,11 +14,30 @@ const LoginForm = () => {
     const [password, setPassword] = useState("");
     const [error, setError] = useState("");
     const [id, setId] = useState("");
-
+    const [isChecked, setIsChecked] = useState(false);
     const intl = useIntl();
-    const emailLabel = intl.formatMessage({ id: "email" });
-    const passwordLabel = intl.formatMessage({ id: "password" });
 
+    useEffect(() => {
+        const remember = localStorage.getItem('remember');
+
+        if (remember !== null) {
+            setIsChecked(remember === 'true');
+        }
+    }, []);
+
+    const handleCheckboxChange = () => {
+        localStorage.setItem('remember', String(!isChecked));
+
+        if (!isChecked) {
+            localStorage.setItem('email',email);
+            localStorage.setItem('password', password);
+        } else {
+            localStorage.removeItem('email');
+            localStorage.removeItem('password');
+        }
+
+        setIsChecked(!isChecked);
+    };
     const router = useRouter();
     const onFinish = (values: any) => {
         const user: Users | undefined = users.users.find((user: Users) => user.email === email)
@@ -92,7 +111,8 @@ const LoginForm = () => {
                 </Form.Item>
                 <Form.Item name="remember" valuePropName="checked" noStyle>
                     <div className={styles.wrappedDiv}>
-                        <Checkbox className={styles.checkBox} defaultChecked={true} 
+                        <Checkbox className={styles.checkBox} 
+                        defaultChecked={true}
                         ><FormattedMessage id="checkbox" /></Checkbox>
                         <Button type="link" className={styles.resetPass}><FormattedMessage id="reset" /></Button>
                     </div>
